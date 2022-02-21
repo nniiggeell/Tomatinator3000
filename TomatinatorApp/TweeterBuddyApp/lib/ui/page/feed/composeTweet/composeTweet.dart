@@ -213,7 +213,7 @@ class _ComposeTweetReplyPageState extends State<ComposeTweetPage> {
     String tweet = '';
     cprint(tweet.length.toString());
     await twitterApi.tweetService.update(
-      status: ''
+      status: _textEditingController.text
     );
     _submitButton(); // posting to the clone
     Navigator.of(context, rootNavigator: true)
